@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://picsum.photos/200/300">
+    <a href="https://www.google.com">Google</a>
+    <div>Hello </div>
+    <script>
+        // alert(document.readyState);
+        // document.addEventListener("DOMContentLoaded",(e)=>{
+        //     alert("Your Dom is Ready to access");
+        //     alert(document.readyState);
+        //     let img = document.querySelector("img");
+        //     alert(img.height)
+            
+            
+        // })
+        window.addEventListener("load",(e)=>{
+            alert("Your Image is Ready")
+            alert(document.readyState);
+            let img = document.querySelector("img");
+            alert(img.height)
+        })
+        window.addEventListener("beforeunload",(e)=>{
+            e.returnValue = "Something Random";// add while using chrome
+            alert("Do You Really Want to leave this site")
+            alert(document.readyState);
+        })
+    </script>
+    
+</body>
+</html>
